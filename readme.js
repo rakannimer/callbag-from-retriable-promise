@@ -16,8 +16,8 @@ const fromRetriablePromise = (promise, desiredRetryCount = 0) => (
   start,
   sink
 ) => {
-  let retryCount = 0;
   if (start !== 0) return;
+  let retryCount = 0;
   let ended = false;
   const onfulfilled = val => {
     if (ended) return;
